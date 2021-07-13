@@ -1,5 +1,7 @@
 #include "battleIncomeWidget.h"
-#include "rapidjson//document.h"
+#include "rapidjson/document.h"
+#include "common/debugModule/logManager.h"
+#include "common/utilityModule/stringUtility.h"
 
 using namespace mb::battleModule;
 
@@ -11,21 +13,22 @@ battleIncomeWidget::battleIncomeWidget() {
 battleIncomeWidget::~battleIncomeWidget() {}
 
 void battleIncomeWidget::setIcon(battleIncomeWidget::eIconLabelTypes type) {
-    auto settings = getPropertyData().FindMember("settings");
-    if (settings != getPropertyData().MemberEnd() && settings->value.IsObject()) {
+    if (hasPropertyObject("settings")) {
+        auto settings = getPropertyObject("settings");
         std::string icon;
         switch (type) {
         case eIconLabelTypes::GOLD: icon = "gold"; break;
         case eIconLabelTypes::TROPHIES: icon = "trophies"; break;
         }
-        auto data = settings->value.GetObject();
-        auto it = data.FindMember(icon.c_str());
-        if (it != data.MemberEnd() && it->value.IsString()) {
+        auto it = settings.FindMember(icon.c_str());
+        if (it != settings.MemberEnd() && it->value.IsString()) {
             if (auto sprite = dynamic_cast<cocos2d::Sprite*>(findNode("icon"))) {
                 sprite->initWithFile(it->value.GetString());
                 loadComponent(sprite);
             }
         }
+    } else {
+        LOG_ERROR("battleIncomeWidget::setIcon Can't load data from settings.");
     }
 }
 void battleIncomeWidget::setData(int income) {
