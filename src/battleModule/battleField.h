@@ -25,7 +25,7 @@ namespace mb::battleModule {
       private:
         void initBaseData(const std::string&);
 
-        common::coreModule::node3d* baseNode = nullptr;
+        common::coreModule::nodeWithProperties<common::coreModule::node3d>* baseNode = nullptr;
         sBattleFieldData baseData;
     };
 }// namespace mb::battleModule

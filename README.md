@@ -1,4 +1,3 @@
-![Linux Tests](https://github.com/gloomyzen/cocos-mercenary-battles/workflows/Linux%20Tests/badge.svg?branch=master)
 # Mercenary Battles
 
 #### Project submodules structure:

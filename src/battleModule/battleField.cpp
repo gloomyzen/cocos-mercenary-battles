@@ -23,10 +23,10 @@ void battleField::loadLocation(const std::string& name) {
     setName(STRING_FORMAT("battlefield_%s", name.c_str()));
     if (data.HasMember("sky") && data["sky"].IsString()) {
         auto skyHolder = new cocos2d::ParallaxNode();
-        auto sky = new cocos2d::Node();
+        auto sky = new nodeWithProperties<cocos2d::Node>();
         skyHolder->addChild(sky, -1, cocos2d::Vec2(0.05f,0.0f), Vec2::ZERO);
         sky->setName("sky");
-        loadProperty(data["sky"].GetString(), sky);
+        sky->loadProperty(data["sky"].GetString(), sky);
         addChild(skyHolder);
     }
     cocos2d::Node* node = this;
@@ -38,16 +38,16 @@ void battleField::loadLocation(const std::string& name) {
         node = ground;
     }
     if (data.HasMember("base") && data["base"].IsString()) {
-        baseNode = new node3d();
+        baseNode = new nodeWithProperties<node3d>();
         baseNode->setName("base");
-        loadProperty(data["base"].GetString(), baseNode);
+        baseNode->loadProperty(data["base"].GetString(), baseNode);
         node->addChild(baseNode);
     } else {
         LOG_ERROR(STRING_FORMAT("battleField::loadLocation: location '%s': base node not exist!", name.c_str()));
         return;
     }
     if (data.HasMember("1stPlan") && data["1stPlan"].IsString()) {
-        auto firstPlan = new cocos2d::Node();
+        auto firstPlan = new nodeWithProperties<cocos2d::Node>();
         firstPlan->setName("1stPlan");
         loadProperty(data["1stPlan"].GetString(), firstPlan);
         node->addChild(firstPlan);
