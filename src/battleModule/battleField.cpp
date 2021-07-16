@@ -31,9 +31,9 @@ void battleField::loadLocation(const std::string& name) {
     }
     cocos2d::Node* node = this;
     if (data.HasMember("ground") && data["ground"].IsString()) {
-        auto ground = new cocos2d::Node();
+        auto ground = new nodeWithProperties<cocos2d::Node>();
         ground->setName("ground");
-        loadProperty(data["ground"].GetString(), ground);
+        ground->loadProperty(data["ground"].GetString(), ground);
         addChild(ground);
         node = ground;
     }
@@ -49,7 +49,7 @@ void battleField::loadLocation(const std::string& name) {
     if (data.HasMember("1stPlan") && data["1stPlan"].IsString()) {
         auto firstPlan = new nodeWithProperties<cocos2d::Node>();
         firstPlan->setName("1stPlan");
-        loadProperty(data["1stPlan"].GetString(), firstPlan);
+        firstPlan->loadProperty(data["1stPlan"].GetString(), firstPlan);
         node->addChild(firstPlan);
     }
     if (data.HasMember("baseData") && data["baseData"].IsString()) {
