@@ -2,7 +2,7 @@
 #define MERCENARY_BATTLES_CUSTOMNODETYPES_H
 
 #include "cocos2d.h"
-#include "common/coreModule/nodes/nodeProperties.h"
+#include "generic/coreModule/nodes/nodeProperties.h"
 
 namespace mb::interfaceModule {
 

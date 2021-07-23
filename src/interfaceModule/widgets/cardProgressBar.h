@@ -2,13 +2,13 @@
 #define MERCENARY_BATTLES_CARDPROGRESSBAR_H
 
 #include "cocos2d.h"
-#include "common/coreModule/nodes/nodeProperties.h"
+#include "generic/coreModule/nodes/nodeProperties.h"
 #include "ui/CocosGUI.h"
 
 namespace mb::interfaceModule {
 
     class cardProgressBar
-        : public common::coreModule::nodeProperties
+        : public generic::coreModule::nodeProperties
         , public cocos2d::Node {
       public:
         cardProgressBar();

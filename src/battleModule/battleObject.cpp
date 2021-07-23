@@ -1,5 +1,5 @@
 #include "battleObject.h"
-#include "common/utilityModule/stringUtility.h"
+#include "generic/utilityModule/stringUtility.h"
 #include <string>
 
 using namespace mb::battleModule;

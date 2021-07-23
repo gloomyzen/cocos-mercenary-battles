@@ -1,9 +1,9 @@
 #include "playerData.h"
-#include "common/debugModule/logManager.h"
-#include "common/utilityModule/stringUtility.h"
+#include "generic/debugModule/logManager.h"
+#include "generic/utilityModule/stringUtility.h"
 
 using namespace mb::battleModule;
-using namespace common::coreModule;
+using namespace generic::coreModule;
 
 playerData::playerData() {}
 playerData::~playerData() {}

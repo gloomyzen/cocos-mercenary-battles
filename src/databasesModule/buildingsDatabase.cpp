@@ -1,5 +1,5 @@
 #include "buildingsDatabase.h"
-#include "common/utilityModule/stringUtility.h"
+#include "generic/utilityModule/stringUtility.h"
 
 using namespace mb::databasesModule;
 

@@ -1,7 +1,7 @@
 #include "charactersDatabase.h"
-#include "common/coreModule/resources/resourceManager.h"
-#include "common/debugModule/logManager.h"
-#include "common/utilityModule/stringUtility.h"
+#include "generic/coreModule/resources/resourceManager.h"
+#include "generic/debugModule/logManager.h"
+#include "generic/utilityModule/stringUtility.h"
 
 using namespace mb::databasesModule;
 

@@ -2,8 +2,8 @@
 
 #include "heroProfileDebug.h"
 #include "cocos2d.h"
-#include "common/profileModule/profileManager.h"
-#include "common/utilityModule/stringUtility.h"
+#include "generic/profileModule/profileManager.h"
+#include "generic/utilityModule/stringUtility.h"
 #include "databasesModule/charactersDatabase.h"
 #include "databasesModule/databaseManager.h"
 #include "ImGuiEXT/imgui/imgui.h"

@@ -4,8 +4,8 @@
 #include "cocos2d.h"
 #include "ImGuiEXT/imgui/imgui.h"
 #include "ImGuiEXT/imgui/imgui_internal.h"
-#include "common/audioModule/audioEngine.h"
-#include "common/debugModule/imGuiLayer.h"
+#include "generic/audioModule/audioEngine.h"
+#include "generic/debugModule/imGuiLayer.h"
 
 using namespace mb::debugProfile;
 
@@ -54,7 +54,7 @@ void soundLibraryDebug::soundWindow(bool* windowOpened) {
            countEffects++;
     });
 
-    common::debugModule::imGuiLayer::Combo("Effects", &currentEffect, items, static_cast<int>(items.size()));
+    generic::debugModule::imGuiLayer::Combo("Effects", &currentEffect, items, static_cast<int>(items.size()));
     if (ImGui::Button("Play effect") && currentEffect >= 0 && currentEffect < static_cast<int>(effects.size())) {
         GET_AUDIO_ENGINE().play(items[currentEffect]);
     }

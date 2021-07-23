@@ -2,7 +2,7 @@
 #define MERCENARY_BATTLES_BUILDINGSDATABASE_H
 
 #include "cocos2d.h"
-#include "common/databaseModule/databaseInterface.h"
+#include "generic/databaseModule/databaseInterface.h"
 #include "rapidjson/document.h"
 #include "rapidjson/ostreamwrapper.h"
 #include <map>
@@ -19,7 +19,7 @@ namespace mb::databasesModule {
         bool load(const rapidjson::GenericValue<rapidjson::UTF8<char>>::ConstObject&);
     };
 
-    class buildingsDatabase : public common::databaseModule::databaseInterface {
+    class buildingsDatabase : public generic::databaseModule::databaseInterface {
       public:
         buildingsDatabase();
         ~buildingsDatabase();

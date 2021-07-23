@@ -5,8 +5,8 @@
 #include "battleModule/battleObject.h"
 #include "battleModule/interface/buildSlot.h"
 #include "cocos2d.h"
-#include "common/coreModule/nodes/nodeProperties.h"
-#include "common/coreModule/nodes/widgets/node3d.h"
+#include "generic/coreModule/nodes/nodeProperties.h"
+#include "generic/coreModule/nodes/widgets/node3d.h"
 #include <map>
 #include <string>
 

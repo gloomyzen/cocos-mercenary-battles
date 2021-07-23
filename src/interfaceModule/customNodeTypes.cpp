@@ -1,5 +1,5 @@
 #include "customNodeTypes.h"
-#include "common/coreModule/nodes/nodeFactory.h"
+#include "generic/coreModule/nodes/nodeFactory.h"
 //interface module
 #include "interfaceModule/widgets/cardProgressBar.h"
 //battle module

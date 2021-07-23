@@ -2,14 +2,14 @@
 #define MERCENARY_BATTLES_BATTLEFIELD_H
 
 #include "cocos2d.h"
-#include "common/coreModule/nodes/nodeProperties.h"
-#include "common/coreModule/nodes/widgets/node3d.h"
+#include "generic/coreModule/nodes/nodeProperties.h"
+#include "generic/coreModule/nodes/widgets/node3d.h"
 #include <string>
 #include <vector>
 
 namespace mb::battleModule {
     class battleField
-        : public common::coreModule::nodeProperties
+        : public generic::coreModule::nodeProperties
         , public cocos2d::Node {
       public:
         struct sBattleFieldData {
@@ -19,13 +19,13 @@ namespace mb::battleModule {
         battleField();
         ~battleField() = default;
         void loadLocation(const std::string&);
-        common::coreModule::node3d* getBaseNode() { return baseNode; }
+        generic::coreModule::node3d* getBaseNode() { return baseNode; }
         sBattleFieldData getBaseData();
 
       private:
         void initBaseData(const std::string&);
 
-        common::coreModule::nodeWithProperties<common::coreModule::node3d>* baseNode = nullptr;
+        generic::coreModule::nodeWithProperties<generic::coreModule::node3d>* baseNode = nullptr;
         sBattleFieldData baseData;
     };
 }// namespace mb::battleModule

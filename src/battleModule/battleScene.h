@@ -4,14 +4,14 @@
 #include "battleModule/battleField.h"
 #include "battleModule/playerData/playerData.h"
 #include "cocos2d.h"
-#include "common/coreModule/nodes/nodeProperties.h"
-#include "common/coreModule/scenes/windows/windowBase.h"
+#include "generic/coreModule/nodes/nodeProperties.h"
+#include "generic/coreModule/scenes/windows/windowBase.h"
 #include <tuple>
 
 namespace mb::battleModule {
 
     class battleScene
-        : public common::coreModule::nodeProperties
+        : public generic::coreModule::nodeProperties
         , public cocos2d::Layer
         , public taskHolder {
       public:

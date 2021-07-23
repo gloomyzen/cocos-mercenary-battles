@@ -1,8 +1,8 @@
 #include "battleField.h"
-#include "common/utilityModule/stringUtility.h"
+#include "generic/utilityModule/stringUtility.h"
 
 using namespace mb::battleModule;
-using namespace common::coreModule;
+using namespace generic::coreModule;
 
 battleField::battleField() {}
 

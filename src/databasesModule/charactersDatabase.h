@@ -2,7 +2,7 @@
 #define MERCENARY_BATTLES_CHARACTERSDATABASE_H
 
 #include "cocos2d.h"
-#include "common/databaseModule/databaseInterface.h"
+#include "generic/databaseModule/databaseInterface.h"
 #include "rapidjson/document.h"
 #include "rapidjson/ostreamwrapper.h"
 #include <map>
@@ -37,7 +37,7 @@ namespace mb::databasesModule {
         bool load(const rapidjson::GenericValue<rapidjson::UTF8<char>>::ConstObject&);
     };
 
-    class charactersDatabase : public common::databaseModule::databaseInterface {
+    class charactersDatabase : public generic::databaseModule::databaseInterface {
       public:
         charactersDatabase();
         ~charactersDatabase();

@@ -1,7 +1,7 @@
 #ifndef MERCENARY_BATTLES_HEROESPROFILEBLOCK_H
 #define MERCENARY_BATTLES_HEROESPROFILEBLOCK_H
 
-#include "common/profileModule/profileBlockInterface.h"
+#include "generic/profileModule/profileBlockInterface.h"
 #include "rapidjson/document.h"
 #include "rapidjson/ostreamwrapper.h"
 #include <map>
@@ -11,7 +11,7 @@
 
 namespace mb::localProfile {
 
-    class heroesProfileBlock : public common::profileModule::profileBlockInterface {
+    class heroesProfileBlock : public generic::profileModule::profileBlockInterface {
       public:
         heroesProfileBlock();
         ~heroesProfileBlock();

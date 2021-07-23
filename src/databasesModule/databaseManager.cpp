@@ -22,7 +22,7 @@ void databaseManager::cleanup() {
     }
 }
 
-void databaseManager::addDatabase(databaseManager::eDatabaseList id, std::string value, common::databaseModule::databaseInterface* db) {
+void databaseManager::addDatabase(databaseManager::eDatabaseList id, std::string value, generic::databaseModule::databaseInterface* db) {
     auto type = static_cast<int>(id);
     registerDatabase({type, value}, db);
 }

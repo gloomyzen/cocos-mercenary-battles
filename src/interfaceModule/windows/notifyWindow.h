@@ -2,12 +2,12 @@
 #define MERCENARY_BATTLES_NOTIFYWINDOW_H
 
 #include "cocos2d.h"
-#include "common/coreModule/scenes/windows/windowBase.h"
+#include "generic/coreModule/scenes/windows/windowBase.h"
 
 namespace mb::interfaceModule {
 
     class notifyWindow
-        : public common::coreModule::windowBase
+        : public generic::coreModule::windowBase
         , public taskHolder {
       public:
         notifyWindow();

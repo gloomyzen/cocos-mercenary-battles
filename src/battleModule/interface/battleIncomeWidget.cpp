@@ -1,7 +1,7 @@
 #include "battleIncomeWidget.h"
 #include "rapidjson/document.h"
-#include "common/debugModule/logManager.h"
-#include "common/utilityModule/stringUtility.h"
+#include "generic/debugModule/logManager.h"
+#include "generic/utilityModule/stringUtility.h"
 
 using namespace mb::battleModule;
 

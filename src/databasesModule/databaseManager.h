@@ -1,15 +1,15 @@
 #ifndef MERCENARY_BATTLES_DATABASEMANAGER_H
 #define MERCENARY_BATTLES_DATABASEMANAGER_H
 
-#include "common/databaseModule/databaseManagerInterface.h"
-#include "common/databaseModule/databaseInterface.h"
+#include "generic/databaseModule/databaseManagerInterface.h"
+#include "generic/databaseModule/databaseInterface.h"
 #include <string>
 #include <map>
 
 #define GET_DATABASE_MANAGER() mb::databasesModule::databaseManager::getInstance()
 
 namespace mb::databasesModule {
-    class databaseManager : public common::databaseModule::databaseManagerInterface {
+    class databaseManager : public generic::databaseModule::databaseManagerInterface {
       public:
         enum class eDatabaseList {
             CHARACTER_DB = 0,
@@ -21,7 +21,7 @@ namespace mb::databasesModule {
         static databaseManager& getInstance();
         void cleanup() override;
 
-        void addDatabase(eDatabaseList id, std::string value, common::databaseModule::databaseInterface* db);
+        void addDatabase(eDatabaseList id, std::string value, generic::databaseModule::databaseInterface* db);
 
         template<typename T>
         T* getDatabase(eDatabaseList key) {

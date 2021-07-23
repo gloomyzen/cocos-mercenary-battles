@@ -3,12 +3,12 @@
 #include "databasesModule/charactersDatabase.h"
 #include "databasesModule/buildingsDatabase.h"
 #include "databasesModule/databaseTool.h"
-#include "common/databaseModule/databaseManagerInterface.h"
-#include "common/utilityModule/stringUtility.h"
+#include "generic/databaseModule/databaseManagerInterface.h"
+#include "generic/utilityModule/stringUtility.h"
 #include <gtest/gtest.h>
 
-using namespace common::utilityModule;
-using namespace common::databaseModule;
+using namespace generic::utilityModule;
+using namespace generic::databaseModule;
 //using namespace mb::databasesModule;
 
 int main(int argc, char** argv) {
