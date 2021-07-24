@@ -151,9 +151,9 @@ endif()
 #------------------------------------------------------------------------------
 #                               Tests section
 #------------------------------------------------------------------------------
-if (ANDROID OR IOS)
-    return()
-    if (DEBUG)
+return()
+if (LINUX OR MACOSX)
+    if (${DEBUG})
         enable_testing()
         add_subdirectory(tests)
     endif ()

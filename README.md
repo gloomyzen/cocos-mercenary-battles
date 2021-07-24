@@ -1,14 +1,15 @@
+[![Linux](https://github.com/gloomyzen/mercenary-battles/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/gloomyzen/mercenary-battles/actions/workflows/ubuntu.yml)
 # Mercenary Battles
 
 #### Project submodules structure:
 
-- [src/common - Common modules for all games](https://github.com/gloomyzen/cocos2d-common)
+- [src/generic - Common modules for all games](https://github.com/gloomyzen/cocos2d-generic)
 - [adxe/cocos2dx game engine](https://github.com/gloomyzen/engine-x)
 
-#### First of all, be sure to clone all submodules:
+#### First, clone repo with all submodules:
 ```bash
-git clone --recurse-submodules git@github.com:gloomyzen/cocos-mercenary-battles.git cocos-mercenary-battles 
-cd cards-app
+git clone --recurse-submodules git@github.com:gloomyzen/mercenary-battles.git mercenary-battles 
+cd mercenary-battles
 ```
 
 #### Install cocos2dx/adxe v4:
@@ -42,7 +43,7 @@ cmake -S . -B build-ios -GXcode -DCMAKE_TOOLCHAIN_FILE=${ADXE_ROOT}/cmake/ios.mi
 For iOS distribution
 ```bash
 cmake -S . -B build-ios -GXcode -DCMAKE_TOOLCHAIN_FILE=${ADXE_ROOT}/cmake/ios.mini.cmake 
-cmake --build build-ios --config Release --target cards-app -- -quiet -jobs 16
+cmake --build build-ios --config Release --target mercenary-battles -- -quiet -jobs 16
 ```
 
 For Visual Studio Community 2019
