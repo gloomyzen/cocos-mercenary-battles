@@ -1,13 +1,31 @@
 {
   "forest": {
-    "sky": "battle/themes/locations/forest/sky",
+    "sky": [{
+      "prop": "battle/themes/locations/forest/sky",
+      "name": "sky",
+      "order": -1,
+      "parallaxRatio": [0.05, 0.0],
+      "positionOffset": [0, 0]
+    }],
     "ground": "battle/themes/locations/forest/ground",
     "base": "battle/themes/locations/forest/base",
     "1stPlan": "battle/themes/locations/forest/1stPlan",
     "baseData": "battle/themes/locations/forest/positions"
   },
   "desert": {
-    "sky": "battle/themes/locations/desert/sky",
+    "sky": [{
+      "prop": "battle/themes/locations/desert/sky_plan1",
+      "name": "skyPlan1",
+      "order": -1,
+      "parallaxRatio": [0.05, 0.0],
+      "positionOffset": [0, 0]
+    }, {
+      "prop": "battle/themes/locations/desert/sky_plan2",
+      "name": "skyPlan2",
+      "order": 1,
+      "parallaxRatio": [0.2, 0.0],
+      "positionOffset": [0, 0]
+    }],
     "ground": "battle/themes/locations/desert/ground",
     "base": "battle/themes/locations/desert/base",
     "1stPlan": "battle/themes/locations/desert/1stPlan",

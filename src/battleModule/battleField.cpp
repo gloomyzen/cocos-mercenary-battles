@@ -21,12 +21,36 @@ void battleField::loadLocation(const std::string& name) {
     }
     auto data = doc[name.c_str()].GetObject();
     setName(STRING_FORMAT("battlefield_%s", name.c_str()));
-    if (data.HasMember("sky") && data["sky"].IsString()) {
+    if (data.HasMember("sky") && data["sky"].IsArray()) {
+        auto array = data["sky"].GetArray();
         auto skyHolder = new cocos2d::ParallaxNode();
-        auto sky = new nodeWithProperties<cocos2d::Node>();
-        skyHolder->addChild(sky, -1, cocos2d::Vec2(0.05f,0.0f), Vec2::ZERO);
-        sky->setName("sky");
-        sky->loadProperty(data["sky"].GetString(), sky);
+        for (auto item = array.Begin(); item != array.End(); ++item) {
+            if (item->IsObject() && item->GetObject().HasMember("prop") && item->GetObject()["prop"].IsString()) {
+                auto object = item->GetObject();
+                auto sky = new nodeWithProperties<cocos2d::Sprite>();
+                auto order = -1;
+                auto parallaxRatio = cocos2d::Vec2(0.05f,0.0f);
+                auto positionOffset = Vec2::ZERO;
+                if (object.HasMember("order") && object["order"].IsNumber()) {
+                    order = object["order"].GetInt();
+                }
+                if (object.HasMember("parallaxRatio") && object["parallaxRatio"].IsArray()) {
+                    auto tempArray = object["parallaxRatio"].GetArray();
+                    parallaxRatio.x = tempArray[0].GetFloat();
+                    parallaxRatio.y = tempArray[1].GetFloat();
+                }
+                if (object.HasMember("positionOffset") && object["positionOffset"].IsArray()) {
+                    auto tempArray = object["positionOffset"].GetArray();
+                    positionOffset.x = tempArray[0].GetFloat();
+                    positionOffset.y = tempArray[1].GetFloat();
+                }
+                if (object.HasMember("name") && object["name"].IsString()) {
+                    sky->setName(object["name"].GetString());
+                }
+                sky->loadProperty(object["prop"].GetString(), sky);
+                skyHolder->addChild(sky, order, parallaxRatio, positionOffset);
+            }
+        }
         addChild(skyHolder);
     }
     cocos2d::Node* node = this;

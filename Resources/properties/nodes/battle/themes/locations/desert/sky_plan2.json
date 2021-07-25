@@ -1,16 +1,16 @@
 {
   "struct": {
     "type": "sprite",
-    "name": "sky"
+    "name": "skyPlan2"
   },
   "props": {
-    "sky": {
+    "skyPlan2": {
       "transformComponent": {
         "position": [0, 0],
-        "anchor": [ 0.0, 0.0 ]
+        "anchor": [ 0.0, -0.62 ]
       },
       "spriteComponent": {
-        "image": "images/battle/themes/location_1/sky.png"
+        "image": "images/battle/themes/location_2/sky/plan2.png"
       }
     }
   }

@@ -5,45 +5,27 @@
     "child": [
       {
         "type": "sprite",
-        "name": "floor",
-        "child": [
-          {
-            "type": "sprite",
-            "name": "floorGlass"
-          }
-        ]
+        "name": "floor"
       },
       {
         "type": "sprite",
-        "name": "floor2",
-        "child": [
-          {
-            "type": "sprite",
-            "name": "floorGlass2"
-          }
-        ]
+        "name": "floor2"
       },
       {
         "type": "sprite",
-        "name": "floor3",
-        "child": [
-          {
-            "type": "sprite",
-            "name": "floorGlass3"
-          }
-        ]
+        "name": "floor3"
       }
     ]
   },
   "props": {
     "ground": {
       "transformComponent": {
-        "position": [-800, 0, 76]
+        "position": [-800, 0]
       }
     },
     "unitHolder": {
       "transformComponent": {
-        "position": [0, -20, -20]
+        "position": [0, -20]
       }
     },
     "floor": {
@@ -71,33 +53,6 @@
       },
       "spriteComponent": {
         "image": "images/battle/themes/location_1/ground.png"
-      }
-    },
-    "floorGlass": {
-      "transformComponent": {
-        "position": [0, 412],
-        "anchor": [0.0, 0.0]
-      },
-      "spriteComponent": {
-        "image": "images/battle/themes/location_1/groundGrass1.png"
-      }
-    },
-    "floorGlass2": {
-      "transformComponent": {
-        "position": [0, 412],
-        "anchor": [0.0, 0.0]
-      },
-      "spriteComponent": {
-        "image": "images/battle/themes/location_1/groundGrass1.png"
-      }
-    },
-    "floorGlass3": {
-      "transformComponent": {
-        "position": [0, 412],
-        "anchor": [0.0, 0.0]
-      },
-      "spriteComponent": {
-        "image": "images/battle/themes/location_1/groundGrass1.png"
       }
     }
   }

@@ -28,7 +28,7 @@
   "props": {
     "base": {
       "transformComponent": {
-        "position": [800, 54, -20],
+        "position": [800, 54],
         "size": [1820, 340]
       }
     },
