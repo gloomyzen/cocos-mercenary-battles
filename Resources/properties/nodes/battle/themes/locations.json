@@ -19,12 +19,6 @@
       "order": -1,
       "parallaxRatio": [0.05, 0.0],
       "positionOffset": [0, 0]
-    }, {
-      "prop": "battle/themes/locations/desert/sky_plan2",
-      "name": "skyPlan2",
-      "order": 1,
-      "parallaxRatio": [0.2, 0.0],
-      "positionOffset": [0, 0]
     }],
     "ground": "battle/themes/locations/desert/ground",
     "base": "battle/themes/locations/desert/base",

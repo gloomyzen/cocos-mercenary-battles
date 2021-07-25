@@ -42,12 +42,6 @@
         "position": [-800, 58, 76]
       }
     },
-    "unitHolder": {
-      "transformComponent": {
-        "rotation3d": [35, 0, 0],
-        "position": [0, -20, -20]
-      }
-    },
     "floor": {
       "transformComponent": {
         "position": [0, 0],

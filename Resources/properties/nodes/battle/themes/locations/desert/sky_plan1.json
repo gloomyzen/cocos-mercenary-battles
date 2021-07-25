@@ -10,7 +10,7 @@
         "anchor": [ 0.0, -3.3 ]
       },
       "spriteComponent": {
-        "image": "images/battle/themes/location_2/sky/plan1.png"
+        "image": "images/battle/themes/location_2/skyPlan1.png"
       }
     }
   }

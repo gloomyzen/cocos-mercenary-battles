@@ -6,26 +6,13 @@
       {
         "type": "sprite",
         "name": "floor"
-      },
-      {
-        "type": "sprite",
-        "name": "floor2"
-      },
-      {
-        "type": "sprite",
-        "name": "floor3"
       }
     ]
   },
   "props": {
     "ground": {
       "transformComponent": {
-        "position": [-800, 0]
-      }
-    },
-    "unitHolder": {
-      "transformComponent": {
-        "position": [0, -20]
+        "position": [0, -253]
       }
     },
     "floor": {
@@ -34,25 +21,7 @@
         "anchor": [0.0, 0.0]
       },
       "spriteComponent": {
-        "image": "images/battle/themes/location_1/ground.png"
-      }
-    },
-    "floor2": {
-      "transformComponent": {
-        "position": [1313, 0],
-        "anchor": [0.0, 0.0]
-      },
-      "spriteComponent": {
-        "image": "images/battle/themes/location_1/ground.png"
-      }
-    },
-    "floor3": {
-      "transformComponent": {
-        "position": [2627, 0],
-        "anchor": [0.0, 0.0]
-      },
-      "spriteComponent": {
-        "image": "images/battle/themes/location_1/ground.png"
+        "image": "images/battle/themes/location_2/ground.png"
       }
     }
   }
