@@ -1,4 +1,5 @@
 #include "heroesProfileBlock.h"
+#include <algorithm>
 
 using namespace mb::localProfile;
 using namespace rapidjson;
