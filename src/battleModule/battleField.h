@@ -3,7 +3,7 @@
 
 #include "cocos2d.h"
 #include "generic/coreModule/nodes/nodeProperties.h"
-#include "generic/coreModule/nodes/widgets/node3d.h"
+#include "generic/coreModule/nodes/types/node3d.h"
 #include <string>
 #include <vector>
 

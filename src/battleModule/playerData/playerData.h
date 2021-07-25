@@ -6,7 +6,7 @@
 #include "battleModule/interface/buildSlot.h"
 #include "cocos2d.h"
 #include "generic/coreModule/nodes/nodeProperties.h"
-#include "generic/coreModule/nodes/widgets/node3d.h"
+#include "generic/coreModule/nodes/types/node3d.h"
 #include <map>
 #include <string>
 
@@ -16,6 +16,7 @@ namespace mb::battleModule {
     enum class ePlayerMode { PVE = 0, PVP };
     enum class ePlayerFraction { HUMAN = 0, ORC };
 
+    //todo вынести это в json, иделально если в бд
     static const std::map<ePlayerFraction, std::string> fractionNames = {
         { ePlayerFraction::ORC, "orc" },
         { ePlayerFraction::HUMAN, "human" },

@@ -5,5 +5,12 @@
     "base": "battle/themes/locations/forest/base",
     "1stPlan": "battle/themes/locations/forest/1stPlan",
     "baseData": "battle/themes/locations/forest/positions"
+  },
+  "desert": {
+    "sky": "battle/themes/locations/desert/sky",
+    "ground": "battle/themes/locations/desert/ground",
+    "base": "battle/themes/locations/desert/base",
+    "1stPlan": "battle/themes/locations/desert/1stPlan",
+    "baseData": "battle/themes/locations/desert/positions"
   }
 }

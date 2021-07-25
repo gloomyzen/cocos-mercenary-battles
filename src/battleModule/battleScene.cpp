@@ -40,7 +40,7 @@ std::deque<nodeTasks> battleScene::getTasks() {
         world = dynamic_cast<cocos2d::Layer*>(findNode("world"));
         // todo check and update theme for battlefield
         battleFieldNode = new battleField();
-        battleFieldNode->loadLocation("forest");
+        battleFieldNode->loadLocation("desert");
         world->addChild(battleFieldNode);
 
         return eTasksStatus::STATUS_OK;

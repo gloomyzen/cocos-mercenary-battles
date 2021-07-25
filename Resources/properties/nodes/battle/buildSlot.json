@@ -13,12 +13,12 @@
       }
     },
     "buildSlotRed": {
-      "buttonComponent": {
+      "spriteComponent": {
         "image": "images/battle/ui/red.png"
       }
     },
     "buildSlotGreen": {
-      "buttonComponent": {
+      "spriteComponent": {
         "image": "images/battle/ui/green.png"
       }
     }
