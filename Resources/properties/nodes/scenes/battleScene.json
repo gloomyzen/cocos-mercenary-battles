@@ -48,14 +48,15 @@
         "inertialScroll": true,
         "containerSize": [640, 1235],
         "scrollPosPercent": [0, 100],
-        "bounce": true
+        "bounce": true,
+        "bounceOffset": [0.05, 0.0]
       }
     },
     "world": {
       "transformComponent": {
         "pivot": [0.0, 0.0],
         "anchor": [0.0, 0.0],
-        "stretch": [2.0, 1.0]
+        "size": [2100, 640]
       }
     },
     "incomeGoldWidget": {

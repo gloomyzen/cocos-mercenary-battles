@@ -28,8 +28,8 @@
   "props": {
     "base": {
       "transformComponent": {
-        "position": [47, 335],
-        "size": [1820, 340]
+        "position": [100, 335],
+        "size": [1680, 340]
       }
     },
     "anim": {

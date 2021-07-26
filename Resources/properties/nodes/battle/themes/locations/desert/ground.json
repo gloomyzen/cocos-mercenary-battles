@@ -12,7 +12,7 @@
   "props": {
     "ground": {
       "transformComponent": {
-        "position": [0, -253]
+        "position": [-100, -253]
       }
     },
     "floor": {
