@@ -38,7 +38,6 @@ std::deque<nodeTasks> battleScene::getTasks() {
     std::deque<nodeTasks> result;
 
     result.emplace_back([this]() {
-        addComponent(new generic::coreModule::debugComponent());
         world = dynamic_cast<cocos2d::Layer*>(findNode("world"));
         // todo check and update theme for battlefield
         battleFieldNode = new battleField();
@@ -87,6 +86,11 @@ std::deque<nodeTasks> battleScene::getTasks() {
         auto goldWidget = dynamic_cast<battleIncomeWidget*>(findNode("incomeGoldWidget"));
         goldWidget->setIcon(battleIncomeWidget::eIconLabelTypes::GOLD);
         goldWidget->setData(gold);
+        goldWidget->addComponent(new generic::coreModule::debugComponent());
+        if (auto d = dynamic_cast<generic::coreModule::debugComponent*>(goldWidget->getComponent("debugComponent"))) {
+            d->setDebug(true);
+        }
+
 
         auto trophiesWidget = dynamic_cast<battleIncomeWidget*>(findNode("incomeTrophiesWidget"));
         trophiesWidget->setIcon(battleIncomeWidget::eIconLabelTypes::TROPHIES);
