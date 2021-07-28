@@ -5,6 +5,7 @@
 #include "generic/coreModule/gameManager.h"
 #include "generic/coreModule/scenes/mainScene.h"
 #include "generic/utilityModule/stringUtility.h"
+#include "generic/coreModule/components/debugComponent.h"
 
 #ifdef DEBUG
 #include "debugModule/heroProfileDebug.h"
@@ -37,6 +38,7 @@ std::deque<nodeTasks> battleScene::getTasks() {
     std::deque<nodeTasks> result;
 
     result.emplace_back([this]() {
+        addComponent(new generic::coreModule::debugComponent());
         world = dynamic_cast<cocos2d::Layer*>(findNode("world"));
         // todo check and update theme for battlefield
         battleFieldNode = new battleField();
